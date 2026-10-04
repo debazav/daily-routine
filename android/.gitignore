@@ -1,0 +1,13 @@
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+.cxx/
+.externalNativeBuild/
+# Chave de assinatura: NUNCA versionar (guarde backup em lugar seguro)
+*.jks
+*.keystore
+keystore.properties

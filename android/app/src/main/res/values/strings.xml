@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rotina Diária</string>
+
+    <string-array name="day_names">
+        <item>Segunda-feira</item>
+        <item>Terça-feira</item>
+        <item>Quarta-feira</item>
+        <item>Quinta-feira</item>
+        <item>Sexta-feira</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string-array name="day_names_short">
+        <item>Seg</item>
+        <item>Ter</item>
+        <item>Qua</item>
+        <item>Qui</item>
+        <item>Sex</item>
+        <item>Sáb</item>
+        <item>Dom</item>
+    </string-array>
+
+    <string name="week_subtitle">Escolha um dia para organizar suas rotinas</string>
+    <string name="today">Hoje</string>
+    <string name="no_routines">Nenhuma rotina</string>
+    <plurals name="routine_count">
+        <item quantity="one">%d rotina</item>
+        <item quantity="many">%d rotinas</item>
+        <item quantity="other">%d rotinas</item>
+    </plurals>
+
+    <string name="back">Voltar</string>
+    <string name="add_routine">Adicionar rotina</string>
+    <string name="add_routine_week">Adicionar rotina em vários dias</string>
+    <string name="edit_routine">Editar rotina</string>
+    <string name="empty_title">Nenhuma rotina cadastrada</string>
+    <string name="empty_hint">Toque em “Adicionar rotina” para começar a organizar seu dia.</string>
+
+    <string name="field_title">Título</string>
+    <string name="field_title_hint">Ex.: Academia, Trabalho, Estudo</string>
+    <string name="field_start">Início</string>
+    <string name="field_end">Fim</string>
+    <string name="field_days">Dias</string>
+    <string name="field_description">Descrição (opcional)</string>
+
+    <string name="save">Salvar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Excluir</string>
+    <string name="ok">OK</string>
+
+    <string name="delete_title">Excluir rotina?</string>
+    <string name="delete_message">“%1$s” (%2$s) será excluída.</string>
+
+    <string name="msg_created">Rotina criada</string>
+    <plurals name="msg_created_days">
+        <item quantity="one">Rotina criada em %d dia</item>
+        <item quantity="many">Rotina criada em %d dias</item>
+        <item quantity="other">Rotina criada em %d dias</item>
+    </plurals>
+    <string name="msg_updated">Rotina atualizada</string>
+    <string name="msg_deleted">Rotina excluída</string>
+
+    <string name="error_empty_title">Informe um título</string>
+    <string name="error_start_after_end">O início deve ser antes do fim</string>
+    <string name="error_no_days">Escolha pelo menos um dia</string>
+    <string name="error_conflict">Conflita com %1$s</string>
+    <string name="conflict_item">“%1$s” (%2$s)</string>
+    <string name="error_conflict_days">Horário já ocupado em:\n%1$s</string>
+    <string name="conflict_day_line">• %1$s: “%2$s” (%3$s)</string>
+
+    <string name="channel_reminders_name">Lembretes de rotina</string>
+    <string name="channel_reminders_description">Avisa quando uma rotina começa</string>
+    <string name="reminder_text">Começa agora · %1$s</string>
+
+    <string name="exact_alarm_title">Lembretes no horário exato</string>
+    <string name="exact_alarm_message">Para o aviso chegar exatamente no início de cada rotina, permita “Alarmes e lembretes” nas configurações. Sem isso, ele pode atrasar alguns minutos.</string>
+    <string name="open_settings">Abrir configurações</string>
+    <string name="not_now">Agora não</string>
+</resources>
