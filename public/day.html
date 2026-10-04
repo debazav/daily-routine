@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotinas do Dia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="day-header">
+            <a href="/" class="back-button">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar
+            </a>
+            <h1 id="day-title">Rotinas do Dia</h1>
+            <button id="add-routine-btn" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+                Adicionar Rotina
+            </button>
+        </header>
+
+        <main>
+            <div id="routines-container" class="routines-container">
+                <!-- Rotinas serão carregadas aqui -->
+            </div>
+
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 12h6M12 9v6M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                    </svg>
+                </div>
+                <h3>Nenhuma rotina cadastrada</h3>
+                <p>Clique em "Adicionar Rotina" para começar a organizar seu dia!</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para adicionar/editar rotina -->
+    <div id="routine-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Adicionar Rotina</h2>
+                <button class="close-btn" id="close-modal" title="Fechar">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <form id="routine-form">
+                <div class="form-group">
+                    <label for="routine-title">Título da Rotina</label>
+                    <input type="text" id="routine-title" name="title" required placeholder="Ex: Acordar, Exercícios, Trabalho">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-time">Horário de Início</label>
+                        <input type="time" id="start-time" name="startTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-time">Horário de Fim</label>
+                        <input type="time" id="end-time" name="endTime" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="routine-description">Descrição (opcional)</label>
+                    <textarea id="routine-description" name="description" rows="3" placeholder="Adicione detalhes sobre esta rotina..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-btn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="save-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação para exclusão -->
+    <div id="delete-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirmar Exclusão</h2>
+                <button class="close-btn" id="close-delete-modal" title="Fechar">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir esta rotina?</p>
+                <p class="delete-routine-info"></p>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="cancel-delete-btn">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirm-delete-btn">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/day.js"></script>
+</body>
+</html> 
